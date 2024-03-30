@@ -1,18 +1,15 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "E:\\libs\\openvino\\runtime\\include\\**",
-                "E:\\libs\\opencv\\build\\include\\**"
+                "/usr/include/**",
+                "/usr/include/opencv4/**",
+                "/usr/lib/gcc/x86_64-linux-gnu/9/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
-            "intelliSenseMode": "windows-gcc-x64"
+            "defines": [],
+            "intelliSenseMode": "linux-gcc-x64"
         }
     ],
     "version": 4

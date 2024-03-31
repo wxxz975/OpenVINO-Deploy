@@ -2,7 +2,8 @@
 
 namespace Common
 {
-    InferenceEngine::InferenceEngine()
+    InferenceEngine::InferenceEngine(PrePostProcessor* pre_post_processor)
+        :m_pre_post_processor(pre_post_processor)
     {
 
     }
@@ -42,6 +43,15 @@ namespace Common
         return {m_ov_infer_request.get_output_tensor()};
     }
 
+    bool InferenceEngine::IsGPUAvailable()
+    {
+        ov::Core ov_core;
+        std::vector<std::string> avaliableDevice = ov_core.get_available_devices();
+    
+        auto iter = std::find(avaliableDevice.begin(), avaliableDevice.end(), "GPU");
+
+        return iter != avaliableDevice.end();
+    }
 }
 
 

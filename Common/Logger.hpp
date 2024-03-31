@@ -15,9 +15,9 @@ namespace Common
         ~Logger() = default;
 
     public:
-        static void log(const std::string& message, const std::string& file, int line)
+        static void log()
         {
-
+            
         }
 
         static void err()
@@ -32,6 +32,9 @@ namespace Common
         }
 
     };
+
+#define log(fmt, ...)   Logger::instance()->log()
+#define err(fmt, ...)   Logger::instance()->err()
 
 }
 

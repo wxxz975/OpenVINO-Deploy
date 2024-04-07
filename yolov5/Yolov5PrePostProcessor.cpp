@@ -1,10 +1,9 @@
 #include "Yolov5PrePostProcessor.h"
-#include "Common/ImageOperations.h"
+#include "ImageOperations.h"
 
 namespace yolov5
 {
-    Yolov5PrePostProcessor::Yolov5PrePostProcessor(ov::CompiledModel& ov_compiled_model)
-        :PrePostProcessor(ov_compiled_model)
+    Yolov5PrePostProcessor::Yolov5PrePostProcessor()
     {
     }
 
@@ -36,7 +35,8 @@ namespace yolov5
         ppp.input().preprocess()
             .convert_layout("NCHW")
             .convert_color(ov::preprocess::ColorFormat::RGB)
-            .convert_element_type(ov::element::f32);
+            .convert_element_type(ov::element::f32)
+            .scale(255.0);
 
         return ppp.build();
     }
@@ -60,8 +60,8 @@ namespace yolov5
 
     std::vector<ov::Tensor> Yolov5PrePostProcessor::CreateTensor(const cv::Mat &image)
     {
-        return { ov::Tensor(m_ov_compiled_model.input().get_element_type(),
-                    m_ov_compiled_model.input().get_shape(),
+        return { ov::Tensor(ov::element::u8,
+                    { m_input_batch, m_input_width, m_input_height, m_input_channels },
                     image.data
             )};
     }

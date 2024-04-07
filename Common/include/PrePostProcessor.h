@@ -5,33 +5,18 @@
 
 #include <vector>
 
-
+#include "ObjectDetection.h"
 
 namespace Common
 {
 
-    struct BoundingBox
-    {
-        std::int32_t left;
-        std::int32_t top;		
-        std::int32_t width;
-        std::int32_t height;
-        std::size_t	 classIndex;
-        float confidence;
-        BoundingBox(std::int32_t x, std::int32_t y, 
-            std::int32_t w, std::int32_t h, 
-            std::size_t idx, float conf)
-            :left(x), top(y), width(w), height(h), classIndex(idx), confidence(conf)
-        {};
-
-    };
-    typedef std::shared_ptr<BoundingBox> PBoundingBox;
+    
 
 
     class PrePostProcessor
     {
     public:
-        PrePostProcessor(ov::CompiledModel& ov_compiled_model);
+        PrePostProcessor();
         virtual ~PrePostProcessor();
 
     public:
@@ -52,8 +37,6 @@ namespace Common
         /// @return 
         virtual std::vector<ov::Tensor> Preprocessing(const cv::Mat& image) = 0;
 
-    protected:
-        ov::CompiledModel& m_ov_compiled_model;
     };
 }
 

@@ -16,7 +16,7 @@ namespace Common
     cv::Mat Letterbox(const cv::Mat& image, const cv::Size& newShape = {640, 640}, 
             const cv::Scalar& color = (114, 114, 114), bool scaleFill = false, bool scaleUp = true,
             int stride = 32
-        )
+        );
     
     /// @brief 这个主要是用于计算经过推理后坐标换源(只有使用Letterbox才能需要这个还原)
     /// @param currentShape 目前推理的图像的形状

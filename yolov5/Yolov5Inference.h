@@ -1,5 +1,5 @@
 #pragma once
-#include "Common/InferenceEngine.h"
+#include "InferenceEngine.h"
 #include "Yolov5PrePostProcessor.h"
 
 namespace yolov5

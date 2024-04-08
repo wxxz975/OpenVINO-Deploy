@@ -7,3 +7,4 @@ project(OpenVINO-Deploy)
 add_subdirectory(Common)
 add_subdirectory(yolov5)
 
+add_subdirectory(yolov8)

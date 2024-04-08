@@ -2,9 +2,18 @@
 
 #include <opencv2/opencv.hpp>
 
+#include "ObjectDetection.h"
+
+
 namespace Common
 {
-    
+    /// @brief 
+    /// @param image 
+    /// @param targetShape 
+    /// @return 
+    bool ConvertSize(cv::Mat& image, cv::Size targetShape);
+
+
     /// @brief 这个主要是用于yolo系列的resize操作，主要操作是 1、按照原始比例等比放缩到目标尺寸，以大的一边为准 2、在小的一边进行padding
     /// @param image 原始图像
     /// @param newShape 目标形状
@@ -24,6 +33,10 @@ namespace Common
     /// @param in_out_Coords 输入推理后的坐标，返回原始的坐标
     void CalcOriCoords(const cv::Size& currentShape, const cv::Size& originalShape, cv::Rect& in_out_Coords);
 
-
-
+    /// @brief 绘制结果框到原始图像上
+    /// @param image 
+    /// @param boxes 
+    /// @param labels 
+    /// @return 
+    cv::Mat RenderBoundingBoxes(const cv::Mat& image, const std::vector<BoundingBox>& boxes, const std::vector<std::string>& labels = std::vector<std::string>());
 };

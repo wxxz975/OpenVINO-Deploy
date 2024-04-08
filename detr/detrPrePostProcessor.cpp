@@ -19,19 +19,6 @@ namespace detr
 
     std::vector<Common::BoundingBox> detrPrePostProcessor::Postprocessing(std::vector<ov::Tensor> &output_tensor)
     {
-        /*
-            for out in output:
-            confidence = out[4:].max()
-            if confidence < 0.5:
-                continue
-            class_id = out[4:].argmax()
-
-            cx, cy, bw, bh = out[:4]
-            xmin = (cx - 0.5 * bw) * image_width
-            xmax = (cx + 0.5 * bw) * image_width
-            ymin = (cy - 0.5 * bh) * image_height
-            ymax = (cy + 0.5 * bh) * image_height
-        */
         std::vector<Common::BoundingBox> result;
         ov::Tensor tensor = output_tensor.at(0);
         float* ptr = reinterpret_cast<float*>(tensor.data());

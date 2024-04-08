@@ -12,7 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
-  "../detr/CMakeLists.txt"
+  "../yolov5/CMakeLists.txt"
   "/usr/lib/cmake/openvino2023.3.0/OpenVINOConfig-version.cmake"
   "/usr/lib/cmake/openvino2023.3.0/OpenVINOConfig.cmake"
   "/usr/lib/cmake/openvino2023.3.0/OpenVINOTargets-release.cmake"
@@ -58,11 +58,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "Common/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "detr/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "yolov5/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "Common/CMakeFiles/OpenVINO-Deploy.dir/DependInfo.cmake"
-  "detr/CMakeFiles/detr.dir/DependInfo.cmake"
+  "Common/CMakeFiles/Common.dir/DependInfo.cmake"
+  "yolov5/CMakeFiles/yolov5.dir/DependInfo.cmake"
   )

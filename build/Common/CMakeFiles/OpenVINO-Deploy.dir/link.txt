@@ -1,2 +1,0 @@
-/usr/bin/ar qc libOpenVINO-Deploy.a  CMakeFiles/OpenVINO-Deploy.dir/src/ImageOperations.cpp.o CMakeFiles/OpenVINO-Deploy.dir/src/InferenceEngine.cpp.o CMakeFiles/OpenVINO-Deploy.dir/src/PrePostProcessor.cpp.o
-/usr/bin/ranlib libOpenVINO-Deploy.a

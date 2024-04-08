@@ -1,6 +1,6 @@
 #pragma once
 #include "InferenceEngine.h"
-#include "Yolov5PrePostProcessor.h"
+
 
 namespace yolov5
 {
@@ -13,7 +13,7 @@ namespace yolov5
         ~Yolov5Inference();
 
     private:
-        Yolov5PrePostProcessor m_pre_post_processor;
+        
     };
 
 }

@@ -5,6 +5,5 @@ project(OpenVINO-Deploy)
 
 # Add subdirectories
 add_subdirectory(Common)
-add_subdirectory(detr)
-
+add_subdirectory(yolov5)
 

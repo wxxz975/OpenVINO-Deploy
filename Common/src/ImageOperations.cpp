@@ -4,6 +4,37 @@
 
 namespace Common
 {
+    bool ConvertSize(cv::Mat& image, cv::Size targetShape)
+    {
+        float height = static_cast<float>(image.rows);
+        float width = static_cast<float>(image.cols);
+        float input_height = static_cast<float>(targetShape.height);
+        float input_width = static_cast<float>(targetShape.width);
+
+        float r = std::min(input_height / height, input_width / width);
+        int padw = static_cast<int>(std::round(width * r));  // 需要放缩成为的值
+        int padh = static_cast<int>(std::round(height * r));
+
+        // 输入图像的宽高不一致的情况 
+        if((int)width != padw || (int)height != padh) 
+            cv::resize(image, image, cv::Size(padw, padh));
+        
+
+        // 把等比缩放得到的图像 计算需要填充padding值
+        float _dw = (input_width - padw) / 2.f; 
+        float _dh = (input_height - padh) / 2.f;
+        // 除2是为了把添加的padding 平摊到左右两边, 是为了保证放缩后的图像在整个图像的正中央
+        
+        int top =  static_cast<int>(std::round(_dh - 0.1f));
+        int bottom = static_cast<int>(std::round(_dh + 0.1f));
+        int left = static_cast<int>(std::round(_dw - 0.1f));
+        int right = static_cast<int>(std::round(_dw + 0.1f));
+        cv::copyMakeBorder(image, image, top, bottom, left, right, cv::BORDER_CONSTANT,
+                            cv::Scalar(114, 114, 114));
+
+        return true;
+    }
+
     cv::Mat Letterbox(const cv::Mat& image, 
         const cv::Size& newShape, 
         const cv::Scalar& color, 
@@ -67,4 +98,16 @@ namespace Common
         in_out_Coords.height = static_cast<int>(std::round((static_cast<float>(in_out_Coords.height) / gain)));
     }
 
+    cv::Mat RenderBoundingBoxes(const cv::Mat &image, const std::vector<BoundingBox> &boxes, const std::vector<std::string> &labels)
+    {
+        cv::Mat out = image.clone();
+        for (const auto& box : boxes) {
+            cv::rectangle(out, cv::Rect(box.left, box.top, box.width, box.height), cv::Scalar(0, 255, 0), 2); // 绘制绿色边界框，线宽为2
+
+            cv::Point labelPosition(box.left, box.top - 10); 
+            std::string label = labels.empty() ? std::to_string(box.classIndex) : labels[box.classIndex];
+            cv::putText(out, label, labelPosition, cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 255), 1);
+        }
+        return out;
+    }
 }

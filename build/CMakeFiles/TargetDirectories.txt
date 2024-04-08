@@ -2,7 +2,7 @@
 /home/wxxz/workspace/OpenVINO-Deploy/build/CMakeFiles/edit_cache.dir
 /home/wxxz/workspace/OpenVINO-Deploy/build/Common/CMakeFiles/rebuild_cache.dir
 /home/wxxz/workspace/OpenVINO-Deploy/build/Common/CMakeFiles/edit_cache.dir
-/home/wxxz/workspace/OpenVINO-Deploy/build/Common/CMakeFiles/OpenVINO-Deploy.dir
-/home/wxxz/workspace/OpenVINO-Deploy/build/detr/CMakeFiles/rebuild_cache.dir
-/home/wxxz/workspace/OpenVINO-Deploy/build/detr/CMakeFiles/edit_cache.dir
-/home/wxxz/workspace/OpenVINO-Deploy/build/detr/CMakeFiles/detr.dir
+/home/wxxz/workspace/OpenVINO-Deploy/build/Common/CMakeFiles/Common.dir
+/home/wxxz/workspace/OpenVINO-Deploy/build/yolov5/CMakeFiles/rebuild_cache.dir
+/home/wxxz/workspace/OpenVINO-Deploy/build/yolov5/CMakeFiles/edit_cache.dir
+/home/wxxz/workspace/OpenVINO-Deploy/build/yolov5/CMakeFiles/yolov5.dir

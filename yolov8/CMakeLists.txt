@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(yolov5)
+project(yolov8)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_BUILD_TYPE Debug)
@@ -15,8 +15,8 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(
     ${PROJECT_NAME} 
     main.cpp
-    Yolov5Inference.cpp
-    Yolov5PrePostProcessor.cpp
+    Yolov8Inference.cpp
+    Yolov8PrePostProcessor.cpp
     )
 
 target_link_libraries(

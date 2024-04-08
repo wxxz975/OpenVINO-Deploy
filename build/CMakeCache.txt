@@ -210,7 +210,7 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-Common_BINARY_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/build/detr/Common
+Common_BINARY_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/build/Common
 
 //Value Computed by CMake
 Common_SOURCE_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/Common
@@ -228,10 +228,10 @@ OpenVINO-Deploy_SOURCE_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy
 OpenVINO_DIR:PATH=/usr/lib/cmake/openvino2023.3.0
 
 //Value Computed by CMake
-detr_BINARY_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/build/detr
+yolov5_BINARY_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/build/yolov5
 
 //Value Computed by CMake
-detr_SOURCE_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/detr
+yolov5_SOURCE_DIR:STATIC=/home/wxxz/workspace/OpenVINO-Deploy/yolov5
 
 
 ########################
@@ -346,7 +346,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

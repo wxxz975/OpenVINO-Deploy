@@ -111,30 +111,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OpenVINO-Deploy
+# Target rules for targets named Common
 
 # Build rule for target.
-OpenVINO-Deploy: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 OpenVINO-Deploy
-.PHONY : OpenVINO-Deploy
+Common: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Common
+.PHONY : Common
 
 # fast build rule for target.
-OpenVINO-Deploy/fast:
-	$(MAKE) -f Common/CMakeFiles/OpenVINO-Deploy.dir/build.make Common/CMakeFiles/OpenVINO-Deploy.dir/build
-.PHONY : OpenVINO-Deploy/fast
+Common/fast:
+	$(MAKE) -f Common/CMakeFiles/Common.dir/build.make Common/CMakeFiles/Common.dir/build
+.PHONY : Common/fast
 
 #=============================================================================
-# Target rules for targets named detr
+# Target rules for targets named yolov5
 
 # Build rule for target.
-detr: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 detr
-.PHONY : detr
+yolov5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 yolov5
+.PHONY : yolov5
 
 # fast build rule for target.
-detr/fast:
-	$(MAKE) -f detr/CMakeFiles/detr.dir/build.make detr/CMakeFiles/detr.dir/build
-.PHONY : detr/fast
+yolov5/fast:
+	$(MAKE) -f yolov5/CMakeFiles/yolov5.dir/build.make yolov5/CMakeFiles/yolov5.dir/build
+.PHONY : yolov5/fast
 
 # Help Target
 help:
@@ -144,8 +144,8 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... OpenVINO-Deploy"
-	@echo "... detr"
+	@echo "... Common"
+	@echo "... yolov5"
 .PHONY : help
 
 

@@ -1,8 +1,5 @@
 #pragma once
 
-#include <memory>
-
-
 namespace Common
 {
     struct BoundingBox
@@ -11,15 +8,15 @@ namespace Common
         int top;		
         int width;
         int height;
-        std::size_t	 classIndex;
+        int	classIndex;
         float confidence;
         BoundingBox(int x, int y, 
             int w, int h, 
-            std::size_t idx, float conf)
+            int idx, float conf)
             :left(x), top(y), width(w), height(h), classIndex(idx), confidence(conf)
         {};
 
     };
-    typedef std::shared_ptr<BoundingBox> PBoundingBox;
+    //typedef std::shared_ptr<BoundingBox> PBoundingBox;
 
 };

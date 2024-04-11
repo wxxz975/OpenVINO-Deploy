@@ -1,11 +1,11 @@
-# Yolov3 Inference
+# Yolov8 Inference
 
 
 
 ## Quick Start
 
 ### Download Model
-download the model from the official [website](https://github.com/ultralytics/yolov3/releases). or choice your own pretrain model to here.
+download the model from the official [website](https://github.com/ultralytics/assets/releases). or choice your own pretrain model to here
 
 
 ### Export Pytorch Model to the ONNX format
@@ -17,7 +17,7 @@ pip install ultralytics
 2. Export example
 
 ```bash
-yolo export model=yolov3n.pt format=onnx
+yolo export model=yolov8n.pt format=onnx
 ```
 For detailed export parameters, please refer to the official [Docs](https://docs.ultralytics.com/modes/export/#arguments).
 
@@ -26,5 +26,9 @@ For detailed export parameters, please refer to the official [Docs](https://docs
 cd <path/to/OpenVINO-Deploy>
 mkdir build && cd build
 make -j$(nproc)
-yolov3/yolov3 <path/to/your/model.onnx> <path/to/test/image>
+yolov8/yolov8 <path/to/your/model.onnx> <path/to/test/image>
 ```
+
+
+
+

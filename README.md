@@ -42,6 +42,9 @@ cmake .. && make -j$(nproc)
 Then, you will find executable files for demos in this build directory.
 
 ---
+***The onnx models exported by the experiment can be found on [BaiduCloud](https://pan.baidu.com/s/1vCOleM0AEdTaI3gF39bgxw?pwd=wxxz)***
+
+
 
 
 
@@ -53,7 +56,7 @@ Then, you will find executable files for demos in this build directory.
 - [ ] yolop
 - [ ] yolov4
 - [x] yolov5
-- [ ] yolov7
+- [x] yolov7
 - [x] yolov8
 - [x] yolov9
 - [ ] detr

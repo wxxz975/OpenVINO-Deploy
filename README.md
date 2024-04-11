@@ -16,9 +16,10 @@ Following models are implemented.
 |-|-|
 |[yolov3](./yolov3/)| A fast and accurate real-time object detection algorithm that can detect multiple objects in an image or video stream with high efficiency.|
 |[yolov5](./yolov5/)| A fast, accurate, and user-friendly real-time object detection algorithm.|
+|[yolov7](./yolov7/)|  A cutting-edge real-time object detection model delivering exceptional accuracy and speed. |
 |[yolov8](./yolov8/)| An enhanced YOLO object detection model with improved performance and flexibility.|
 |[yolov9](./yolov9/)| Paper yolov9 Implement, Learning What You Want to Learn Using Programmable Gradient Information.|
-|[detr](./detr/)| A transformer-based object detection model that directly predicts object bounding boxes and classes.|
+<!-- |[detr](./detr/)| A transformer-based object detection model that directly predicts object bounding boxes and classes.| -->
 
 
 ## Quick Start

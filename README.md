@@ -19,6 +19,8 @@ Following models are implemented.
 |[yolov7](./yolov7/)|  A cutting-edge real-time object detection model delivering exceptional accuracy and speed. |
 |[yolov8](./yolov8/)| An enhanced YOLO object detection model with improved performance and flexibility.|
 |[yolov9](./yolov9/)| Paper yolov9 Implement, Learning What You Want to Learn Using Programmable Gradient Information.|
+|[rt-detr](./rtdetr/)| RT-DETR is a real-time object detection model that leverages transformers for efficient and accurate performance. |
+
 <!-- |[detr](./detr/)| A transformer-based object detection model that directly predicts object bounding boxes and classes.| -->
 
 
@@ -61,7 +63,7 @@ Then, you will find executable files for demos in this build directory.
 - [x] yolov8
 - [x] yolov9
 - [ ] detr
-- [ ] rt-detr
+- [x] rt-detr
 - [ ] ssd
 - [ ] faster-rcnn
 

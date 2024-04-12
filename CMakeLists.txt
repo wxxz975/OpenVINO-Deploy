@@ -18,3 +18,5 @@ add_subdirectory(yolov5)
 add_subdirectory(yolov7)
 add_subdirectory(yolov8)
 add_subdirectory(yolov9)
+
+add_subdirectory(rtdetr)

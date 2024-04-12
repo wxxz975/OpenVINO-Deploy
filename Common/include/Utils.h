@@ -25,6 +25,22 @@ namespace Common
         int maxIndex = std::distance(start, maxIt);
         return {maxValue, maxIndex};
     }
+
+    template<class T>
+    std::pair<T, int> MaxEle(T* start, T* end)
+    {
+        auto maxIt = std::max_element(start, end);
+        if (maxIt == end) {
+            // 如果范围为空，抛出异常或返回一个无效值
+            //throw std::runtime_error("Cannot perform MaxEle on an empty range.");
+            return std::make_pair(std::numeric_limits<T>::min(), -1);
+        }
+
+        T maxValue = *maxIt;
+        int maxIndex = std::distance(start, maxIt);
+        return {maxValue, maxIndex};
+
+    }
     
     /// @brief 交并比
     /// @param box1 

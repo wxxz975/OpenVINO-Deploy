@@ -20,3 +20,4 @@ add_subdirectory(yolov8)
 add_subdirectory(yolov9)
 
 add_subdirectory(rtdetr)
+add_subdirectory(crnn)

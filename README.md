@@ -62,8 +62,13 @@ Then, you will find executable files for demos in this build directory.
 - [x] yolov7
 - [x] yolov8
 - [x] yolov9
+- [ ] yolox
 - [ ] detr
 - [x] rt-detr
 - [ ] ssd
 - [ ] faster-rcnn
+- [ ] Mask-RCNN
+- [ ] CenterNet
+- [ ] RetinaFace
+- [ ] RefineDet
 

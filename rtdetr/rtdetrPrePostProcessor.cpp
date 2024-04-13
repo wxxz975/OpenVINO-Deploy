@@ -25,7 +25,7 @@ namespace rtdetr
 
         ppp.input().preprocess()
             .convert_element_type(ov::element::f32)
-            .convert_color(ov::preprocess::ColorFormat::RGB)
+            .convert_color(ov::preprocess::ColorFormat::GRAY)
             .convert_layout("NCHW")
             .scale(255.f);
 

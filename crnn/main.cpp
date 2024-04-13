@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
     if(engine.Initialize(model_path)) {
         auto result = engine.Infer(image);
 
-        
+        std::cout << "Result:" << result << "\n";
     }
 
     return 0;

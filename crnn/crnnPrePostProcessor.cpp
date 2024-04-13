@@ -50,9 +50,9 @@ namespace crnn
         return str;
     }
 
-    std::vector<Common::BoundingBox> crnnPrePostProcessor::Postprocessing(std::vector<ov::Tensor> &output_tensor)
+    std::string crnnPrePostProcessor::Postprocessing(std::vector<ov::Tensor> &output_tensor)
     {
-        std::vector<Common::BoundingBox> result;
+        std::string result;
         ov::Tensor tensor = output_tensor.at(0);
         float* raw_ptr = reinterpret_cast<float*>(tensor.data());
 
@@ -64,8 +64,9 @@ namespace crnn
             }
             preds.push_back(maxj);
         }
-        std::cout << "raw: " << strDecode(preds, true) << std::endl;
-        std::cout << "sim: " << strDecode(preds, false) << std::endl;
+        //std::cout << "raw: " << strDecode(preds, true) << std::endl;
+        result = strDecode(preds, false);
+        //std::cout << "sim: " << strDecode(preds, false) << std::endl;
 
         return result;
     }
@@ -120,11 +121,11 @@ namespace crnn
         m_output_seq_len = m_output_dims.at(0);
         m_output_num_classes = m_output_dims.at(2);
 
-        std::cout << "m_input_channel:" << m_input_channel 
-                << " m_input_height:" << m_input_height
-                << " m_input_width:" << m_input_width
-                << " m_output_seq_len:" << m_output_seq_len
-                << " m_output_num_classes:" << m_output_num_classes
-                << "\n";
+        // std::cout << "m_input_channel:" << m_input_channel 
+        //         << " m_input_height:" << m_input_height
+        //         << " m_input_width:" << m_input_width
+        //         << " m_output_seq_len:" << m_output_seq_len
+        //         << " m_output_num_classes:" << m_output_num_classes
+        //         << "\n";
     }
 };

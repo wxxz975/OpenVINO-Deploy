@@ -1,20 +1,21 @@
 #pragma once
-#include "PrePostProcessor.h"
-
+#include <string>
+#include <openvino/openvino.hpp>
+#include <opencv2/opencv.hpp>
 
 namespace crnn
 {
-    class crnnPrePostProcessor: public Common::PrePostProcessor
+    class crnnPrePostProcessor
     {
     public:
         crnnPrePostProcessor();
         ~crnnPrePostProcessor();
 
-        std::shared_ptr<ov::Model> OvPrePostprocessing(std::shared_ptr<ov::Model> ov_model) override;
+        std::shared_ptr<ov::Model> OvPrePostprocessing(std::shared_ptr<ov::Model> ov_model) ;
 
-        std::vector<Common::BoundingBox> Postprocessing(std::vector<ov::Tensor>& output_tensor) override;
+        std::string Postprocessing(std::vector<ov::Tensor>& output_tensor) ;
 
-        std::vector<ov::Tensor> Preprocessing(const cv::Mat& image) override;
+        std::vector<ov::Tensor> Preprocessing(const cv::Mat& image) ;
 
     private:
 

@@ -16,6 +16,7 @@ add_library(
         src/InferenceEngine.cpp
         src/PrePostProcessor.cpp
         src/Utils.cpp
+        src/Filesystem.cpp
     )
 
 target_link_libraries(

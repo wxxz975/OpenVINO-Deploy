@@ -1,4 +1,5 @@
 #include "InferenceEngine.h"
+#include "Filesystem.h"
 
 namespace Common
 {
@@ -15,6 +16,9 @@ namespace Common
 
     bool InferenceEngine::Initialize(const std::string& model_path)
     {
+        if(!Common::IFilesystem::IsExist(model_path))
+            return false;
+
         ov::Core ov_core;
         m_ov_model = ov_core.read_model(model_path);
         m_ov_model = m_pre_post_processor->OvPrePostprocessing(m_ov_model);
